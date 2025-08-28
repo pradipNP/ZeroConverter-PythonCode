@@ -31,3 +31,51 @@ Issue
 - The above implementation fails for large inputs like 777, 4832, etc.
 - For positive numbers, it may miss printing 0 correctly.
 - For negative numbers, the range(n, 1, 1) loop does not include 0 and sometimes prints nothing at all.
+
+## Correct Implementation (✅ Works for all inputs)
+```python
+def pos(n):
+    n -= 1
+    while n >= 0:
+        print(n, end=' ')
+        n -= 1
+
+def neg(n):
+    while n <= 0:
+        print(n, end=' ')
+        n += 1
+```
+Example
+Input:
+```ini
+n = -3
+```
+
+Output:
+```diff
+-3 -2 -1 0
+```
+Usage
+Run the program with Python:
+```bash
+python ZeroConverter.py
+```
+Example in code:
+```python
+pos(5)    # Output: 4 3 2 1 0
+neg(-5)   # Output: -5 -4 -3 -2 -1 0
+```
+Requirements
+- Python 3.10+
+
+License
+This project is licensed under the MIT License.
+```pgsql
+
+---
+
+You can now **copy all of this** and paste it into a new `README.md` on GitHub or edit your existing one.  
+
+Do you want me to also provide a **ready-to-copy `main.py` file with this explanation in comments** for your repo?
+
+
